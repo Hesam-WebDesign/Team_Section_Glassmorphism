@@ -1,0 +1,102 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    font-family: 'Public Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(255, 255, 255);
+}
+
+a {
+    text-decoration: none;
+}
+
+.teamwork-glass {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: rgb(2, 1, 10);
+    contain: content;
+}
+
+.teamwork-glass .circle1 {
+    position: absolute;
+    left: -100px;
+    top: -50px;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(rgb(214, 47, 47), rgb(212, 156, 156));
+    clip-path: circle(50%);
+}
+
+.teamwork-glass .circle2 {
+    position: absolute;
+    right: -50px;
+    bottom: 10px;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(rgb(59, 42, 216), rgb(27, 189, 189));
+    clip-path: circle(50%);
+}
+
+.teamwork-glass .feature {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamwork-glass .feature .content {
+    background: rgba(65, 63, 83, 0.5);
+    box-shadow: 0 10px 20px rgb(3, 8, 10, 0.2);
+    margin: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px) saturate(200%);
+    border: 1px solid rgb(111, 108, 122);
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.teamwork-glass .feature .content:hover {
+    opacity: 1;
+}
+
+.teamwork-glass .feature .content .image {
+    width: 180px;
+    height: 180px;
+    margin: 40px;
+}
+
+.teamwork-glass .feature .content .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid rgb(8, 13, 14);
+}
+
+.teamwork-glass .feature .content .name h2,
+.teamwork-glass .feature .content .job h3 {
+    text-align: center;
+    margin: 10px;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.541);
+}
+
+.teamwork-glass .feature .content .social-media img {
+    position: relative;
+    width: 15%;
+    height: 15%;
+    margin: 10px;
+    left: 44px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.7s;
+}
+
+.teamwork-glass .feature .content:hover .social-media img {
+    opacity: 1;
+    transform: translateY(0px);
+}
